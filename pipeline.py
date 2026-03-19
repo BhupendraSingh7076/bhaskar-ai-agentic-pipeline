@@ -1,6 +1,5 @@
-# -------------------------------
+
 # Step 1: Decompose topic (Mock LLM)
-# -------------------------------
 def decompose_topic(topic):
     """
     Simulated LLM response using prompt logic
@@ -14,9 +13,7 @@ def decompose_topic(topic):
     ]
 
 
-# -------------------------------
 # Step 2: Mock tool (answer generator)
-# -------------------------------
 def mock_answer_tool(question):
     """
     Simulates a tool call returning answers
@@ -27,9 +24,8 @@ def mock_answer_tool(question):
     return "This can be explained based on general knowledge and commonly observed examples."
 
 
-# -------------------------------
+
 # Step 3: Answer all questions
-# -------------------------------
 def answer_questions(questions):
     answers = []
     flagged = []
@@ -44,9 +40,7 @@ def answer_questions(questions):
     return answers, flagged
 
 
-# -------------------------------
 # Step 4: Synthesis (Mock LLM)
-# -------------------------------
 def synthesize(qa_pairs, topic):
     """
     Simulated summary generation
@@ -62,42 +56,34 @@ def synthesize(qa_pairs, topic):
     return f"Title: {topic.title()}\n\nSummary:\n{summary}"
 
 
-# -------------------------------
 # Main pipeline
-# -------------------------------
 def run_pipeline(topic):
     print(f"\nTopic: {topic}\n")
 
-    # Step 1: Decomposition
     questions = decompose_topic(topic)
 
     print("Sub-Questions:")
     for i, q in enumerate(questions, 1):
         print(f"{i}. {q}")
 
-    # Step 2: Answering
     qa_pairs, flagged = answer_questions(questions)
 
     print("\nAnswers:")
     for q, a in qa_pairs:
         print(f"\nQ: {q}\nA: {a}")
 
-    # Step 3: Synthesis
     final_output = synthesize(qa_pairs, topic)
 
     print("\nFinal Output:\n")
     print(final_output)
 
-    # Step 4: Flagging uncertainty
     if flagged:
         print("\n⚠ Low Confidence Questions:")
         for q in flagged:
             print(f"- {q}")
 
 
-# -------------------------------
 # Run
-# -------------------------------
 if __name__ == "__main__":
     topic = "Indian classical dance forms"
     run_pipeline(topic)
