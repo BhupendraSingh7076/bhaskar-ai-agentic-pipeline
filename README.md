@@ -32,3 +32,8 @@ export ANTHROPIC_API_KEY=your_api_key_here
 ---
 
 ## 📂 Project Structure
+
+### Note on LLM Usage
+The assignment suggests using the Anthropic SDK. However, due to API billing requirements, I simulated LLM behavior in the decomposition and synthesis steps.
+
+The prompts designed in Task 1 are intended to be used with an LLM in a real implementation. The current pipeline structure mirrors how the system would function with actual API calls.
