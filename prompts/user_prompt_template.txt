@@ -1,0 +1,4 @@
+Topic: "{topic}"
+
+Generate 3 to 5 focused research sub-questions based on the topic.
+Follow all instructions provided in the system prompt.
