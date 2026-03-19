@@ -2,7 +2,7 @@
 
 This project implements a simple agentic pipeline that processes a topic through three stages: decomposition, answering, and synthesis.
 
-## 🚀 Overview
+## Overview
 
 Given a topic, the system:
 1. Breaks it into 3–5 focused sub-questions
@@ -12,7 +12,7 @@ Given a topic, the system:
 
 ---
 
-## 🧠 Pipeline Flow
+## Pipeline Flow
 
 Topic → Decompose → Answer → Synthesize → Final Output
 
