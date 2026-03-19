@@ -25,6 +25,7 @@ pip install anthropic
 #### 2. Set API Key
 Windows:
 set ANTHROPIC_API_KEY=your_api_key_here
+
 Mac/Linux:
 export ANTHROPIC_API_KEY=your_api_key_here
 
