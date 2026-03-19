@@ -25,7 +25,9 @@ Final Output:
 Title: Indian Classical Dance Forms
 
 Summary:
-Indian Classical Dance Forms are important subjects with various aspects including definition, types, applications, and challenges. They play a significant role in cultural and practical contexts. While they have strong traditional or functional value, they also face challenges and evolving future trends. Understanding these aspects helps in gaining a complete overview of the topic.
+Indian Classical Dance Forms are important subjects with various aspects including definition, types, applications, and challenges. 
+They play a significant role in cultural and practical contexts. While they have strong traditional or functional value, they also face challenges 
+and evolving future trends. Understanding these aspects helps in gaining a complete overview of the topic.
 
 ⚠ Low Confidence Questions:
 - What are the challenges and future trends related to Indian classical dance forms?
