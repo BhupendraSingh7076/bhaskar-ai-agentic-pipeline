@@ -16,6 +16,12 @@ Given a topic, the system:
 
 Topic → Decompose → Answer → Synthesize → Final Output
 
+
+## ⚙️ Setup Instructions
+
+### 1. Install dependencies
+pip install anthropic
+
 ---
 
 ## 📂 Project Structure
