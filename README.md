@@ -32,6 +32,7 @@ export ANTHROPIC_API_KEY=your_api_key_here
 ---
 
 ## 📂 Project Structure
+```
 User Input (Topic)
         │
         ▼
@@ -62,6 +63,7 @@ Final Output
 - Title
 - Summary
 - ⚠ Low-confidence questions (if any)
+```
 
 ### Note on LLM Usage
 The assignment suggests using the Anthropic SDK. However, due to API billing requirements, I simulated LLM behavior in the decomposition and synthesis steps.
