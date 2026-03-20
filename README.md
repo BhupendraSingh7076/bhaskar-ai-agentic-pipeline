@@ -17,7 +17,7 @@ Given a topic, the system:
 Topic → Decompose → Answer → Synthesize → Final Output
 
 
-## ⚙️ Setup Instructions
+## Setup Instructions
 
 #### 1. Install dependencies
 pip install anthropic
@@ -31,7 +31,7 @@ export ANTHROPIC_API_KEY=your_api_key_here
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 ```
 User Input (Topic)
         │
