@@ -51,3 +51,40 @@ project/
 └── prompts/
     ├── system_prompt.txt
     └── user_prompt_template.txt
+
+
+Agentic Pipeline
+User Input (Topic)
+        │
+        ▼
+Decomposition Step (LLM)
+- Uses system_prompt.txt
+- Uses user_prompt_template.txt
+        │
+        ▼
+Sub-Questions (3–5)
+        │
+        ▼
+Answer Step (Mock Tool)
+- Each question processed
+- Returns fixed/templated answers
+        │
+        ▼
+Answer Collection
+- Store all Q&A pairs
+- Detect [UNCERTAIN] responses
+        │
+        ▼
+Synthesis Step (LLM)
+- Combines all answers
+- Generates Title + Summary
+        │
+        ▼
+Final Output
+- Title
+- Summary
+- ⚠ Low-confidence questions (if any)
+
+Model & API
+API Used: OpenRouter (as an equivalent to Anthropic SDK)
+Model: mistralai/mistral-7b-instruct
