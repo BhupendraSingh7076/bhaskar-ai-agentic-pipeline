@@ -66,6 +66,11 @@ Final Output
 ```
 
 ### Note on LLM Usage
-The assignment suggests using the Anthropic SDK. However, due to API billing requirements, I simulated LLM behavior in the decomposition and synthesis steps.
 
-The prompts designed in Task 1 are intended to be used with an LLM in a real implementation. The current pipeline structure mirrors how the system would function with actual API calls.
+This implementation uses an external LLM via the OpenRouter API as an equivalent to the Anthropic SDK mentioned in the assignment.
+
+The decomposition and synthesis steps are powered by the LLM, using the prompts defined in `system_prompt.txt` and `user_prompt_template.txt`. 
+
+The answer step is intentionally implemented as a mock tool, as per the assignment requirements, to simulate tool-based responses and demonstrate how the pipeline would integrate external tools in a real-world system.
+
+This setup reflects a realistic agentic workflow with clear separation between LLM reasoning and tool execution.
