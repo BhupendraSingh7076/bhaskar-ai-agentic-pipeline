@@ -1,7 +1,9 @@
-I designed the prompt to enforce structure, clarity, and consistency in the decomposition step. The system prompt assigns a clear role ("research planning assistant") and defines strict requirements for sub-questions, including specificity, non-overlap, and coverage of multiple aspects of a topic.
+### Design Notes
 
-I included a few-shot example to guide the model toward the expected output format and quality. This reduces ambiguity and improves reliability.
+The pipeline is designed as a three-stage agentic workflow: decomposition, answering, and synthesis. The decomposition and synthesis steps use an LLM via OpenRouter (as an equivalent to the Anthropic SDK), while the answering step is implemented as a mock tool to simulate tool-based interactions, as required.
 
-Edge cases are explicitly handled to ensure robustness when dealing with broad, unclear, or low-information topics.
+Prompts are stored separately (`system_prompt.txt` and `user_prompt_template.txt`) to ensure modularity and allow easy iteration without changing core logic. The system prompt enforces structure, output format, and edge case handling to improve reliability.
 
-The output format is constrained to a numbered list to make downstream parsing in the pipeline simple and predictable.
+Basic error handling is included for empty inputs, API failures, and invalid LLM responses. Additionally, low-confidence outputs are detected using a simple `[UNCERTAIN]` flag.
+
+This design reflects a realistic separation between reasoning (LLM) and execution (tools), similar to modern agentic systems.
