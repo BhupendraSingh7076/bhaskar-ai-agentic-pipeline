@@ -32,6 +32,36 @@ export ANTHROPIC_API_KEY=your_api_key_here
 ---
 
 ## 📂 Project Structure
+User Input (Topic)
+        │
+        ▼
+Decomposition Step (LLM)
+- Uses system_prompt.txt
+- Uses user_prompt_template.txt
+        │
+        ▼
+Sub-Questions (3–5)
+        │
+        ▼
+Answer Step (Mock Tool)
+- Each question processed
+- Returns fixed/templated answers
+        │
+        ▼
+Answer Collection
+- Store all Q&A pairs
+- Detect [UNCERTAIN] responses
+        │
+        ▼
+Synthesis Step (LLM)
+- Combines all answers
+- Generates Title + Summary
+        │
+        ▼
+Final Output
+- Title
+- Summary
+- ⚠ Low-confidence questions (if any)
 
 ### Note on LLM Usage
 The assignment suggests using the Anthropic SDK. However, due to API billing requirements, I simulated LLM behavior in the decomposition and synthesis steps.
