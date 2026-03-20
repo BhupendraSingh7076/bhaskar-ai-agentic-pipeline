@@ -39,3 +39,15 @@ PowerShell:
 $env:OPENROUTER_API_KEY="your_api_key_here"
 Mac/Linux:
 export OPENROUTER_API_KEY=your_api_key_here
+
+
+Project Structure
+project/
+│
+├── pipeline.py
+├── sample_output.txt
+├── README.md
+├── NOTES.md
+└── prompts/
+    ├── system_prompt.txt
+    └── user_prompt_template.txt
