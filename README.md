@@ -1,59 +1,74 @@
-# Agentic AI Pipeline Assignment
+# Agentic AI Pipeline
 
-This project implements a simple agentic pipeline that processes a topic through three stages: decomposition, answering, and synthesis.
+This project implements a simple agentic pipeline that processes a topic through three stages: **decomposition → answering → synthesis**.
 
 ---
 
-## Overview
+## 🚀 Overview
 
 Given a topic, the system:
 
-1. Breaks it into 3–5 focused sub-questions (using LLM)
-2. Generates short answers using a mock tool
-3. Synthesizes the results into a final summary with a title (using LLM)
-4. Flags low-confidence outputs (`[UNCERTAIN]`)
+1. Breaks it into 3–5 focused sub-questions using an LLM
+2. Generates answers using a mock tool
+3. Synthesizes the results into a final summary with a title using an LLM
+4. Flags low-confidence outputs containing `[UNCERTAIN]`
 
 ---
 
-## Pipeline Flow
+## 🔄 Pipeline Flow
 
 Topic → Decompose → Answer → Synthesize → Final Output
 
 ---
 
-## Setup Instructions
+## ⚙️ Setup Instructions
 
-### 1. Install dependencies
+### 1. Install Dependencies
 
 ```bash
 pip install requests
+```
 
+### 2. Required Libraries
 
-2. Set API Key (OpenRouter)
+* `os` (built-in)
+* `requests`
+
+### 3. Set API Key (OpenRouter)
 
 Get your free API key from: https://openrouter.ai
 
-Windows (CMD):
+#### Google Colab
+
+```python
+import os
+os.environ["OPENROUTER_API_KEY"] = "your_api_key_here"
+```
+
+#### Windows (CMD)
+
+```bash
 set OPENROUTER_API_KEY=your_api_key_here
-PowerShell:
-$env:OPENROUTER_API_KEY="your_api_key_here"
-Mac/Linux:
+```
+
+#### Mac/Linux
+
+```bash
 export OPENROUTER_API_KEY=your_api_key_here
+```
 
+---
 
-Project Structure
-project/
-│
-├── pipeline.py
-├── sample_output.txt
-├── README.md
-├── NOTES.md
-└── prompts/
-    ├── system_prompt.txt
-    └── user_prompt_template.txt
+## 🤖 Model & API
 
+* **API Used:** OpenRouter (equivalent to Anthropic SDK)
+* **Model Used:** LLaMA (via OpenRouter)
 
-Agentic Pipeline
+---
+
+## 🧠 Agentic Pipeline
+
+```
 User Input (Topic)
         │
         ▼
@@ -84,7 +99,16 @@ Final Output
 - Title
 - Summary
 - ⚠ Low-confidence questions (if any)
+```
 
-Model & API
-API Used: OpenRouter (as an equivalent to Anthropic SDK)
-Model: mistralai/mistral-7b-instruct
+---
+
+## 📝 Note on LLM Usage
+
+This implementation uses an external LLM via the OpenRouter API as an equivalent to the Anthropic SDK mentioned in the assignment.
+
+The decomposition and synthesis steps are powered by the LLM using structured prompts stored in separate files.
+
+The answer step is intentionally implemented as a mock tool, as required in the assignment, to simulate tool-based responses and demonstrate how external tools would be integrated in a real-world agentic system.
+
+This design reflects a realistic separation between LLM reasoning and tool execution.
