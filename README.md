@@ -4,7 +4,7 @@ This project implements a simple agentic pipeline that processes a topic through
 
 ---
 
-## 🚀 Overview
+## Overview
 
 Given a topic, the system:
 
@@ -15,13 +15,13 @@ Given a topic, the system:
 
 ---
 
-## 🔄 Pipeline Flow
+## Pipeline Flow
 
 Topic → Decompose → Answer → Synthesize → Final Output
 
 ---
 
-## ⚙️ Setup Instructions
+## Setup Instructions
 
 ### 1. Install Dependencies
 
@@ -59,14 +59,14 @@ export OPENROUTER_API_KEY=your_api_key_here
 
 ---
 
-## 🤖 Model & API
+## Model & API
 
 * **API Used:** OpenRouter (equivalent to Anthropic SDK)
 * **Model Used:** LLaMA (via OpenRouter)
 
 ---
 
-## 🧠 Agentic Pipeline
+## Agentic Pipeline
 
 ```
 User Input (Topic)
@@ -103,7 +103,7 @@ Final Output
 
 ---
 
-## 📝 Note on LLM Usage
+## Note on LLM Usage
 
 This implementation uses an external LLM via the OpenRouter API as an equivalent to the Anthropic SDK mentioned in the assignment.
 
