@@ -1,13 +1,10 @@
 ### Design Notes
 
-The pipeline is designed as a three-stage agentic workflow: decomposition, answering, and synthesis. The decomposition and synthesis steps use an LLM via OpenRouter (as an equivalent to the Anthropic SDK), while the answering step is implemented as a mock tool to simulate tool-based interactions, as required.
+This pipeline is designed to clearly separate reasoning and execution. I used an LLM for the decomposition step because it can intelligently break a broad topic into focused sub-questions. The answer step is implemented as a mock tool to simulate external tool usage, as required by the assignment, and to demonstrate how agentic systems integrate tools. 
 
-Prompts are stored separately (`system_prompt.txt` and `user_prompt_template.txt`) to ensure modularity and allow easy iteration without changing core logic. The system prompt enforces structure, output format, and edge case handling to improve reliability.
+Prompts are stored in separate files to keep the system modular and easy to update without changing code. 
 
-Basic error handling is included for empty inputs, API failures, and invalid LLM responses. Additionally, low-confidence outputs are detected using a simple `[UNCERTAIN]` flag.
-
-This design reflects a realistic separation between reasoning (LLM) and execution (tools), similar to modern agentic systems.
-
+The pipeline can handle any user-provided topic dynamically, making it flexible and reusable. Basic edge case handling is included, such as checking for empty input and handling API failures or invalid LLM responses. This design keeps the system simple, readable, and aligned with real-world agentic workflows.
 
 
 ### Reflection
