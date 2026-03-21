@@ -113,4 +113,4 @@ Basic error handling is included for API failures and invalid inputs.
 
 The answer step is intentionally implemented as a mock tool, as required in the assignment, to simulate tool-based responses and demonstrate how external tools would be integrated in a real-world agentic system.
 
-This design reflects a realistic separation between LLM reasoning and tool execution.
+This design reflects a realistic separation between LLM reasoning and tool execution, and the pipeline can dynamically handle any user-provided topic as input.
