@@ -4,7 +4,9 @@ This pipeline is designed to clearly separate reasoning and execution. I used an
 
 Prompts are stored in separate files to keep the system modular and easy to update without changing code. 
 
-The pipeline can handle any user-provided topic dynamically, making it flexible and reusable. Basic edge case handling is included, such as checking for empty input and handling API failures or invalid LLM responses. This design keeps the system simple, readable, and aligned with real-world agentic workflows.
+The pipeline can handle any user-provided topic dynamically, making it flexible and reusable. Basic edge case handling is included, such as checking for empty input and handling API failures or invalid LLM responses. 
+
+This design keeps the system simple, readable, and aligned with real-world agentic workflows.
 
 
 ### Reflection
